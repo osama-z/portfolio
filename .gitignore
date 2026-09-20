@@ -1,0 +1,31 @@
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Private planning and application documents
+/private/
+/personal-notes/
+/applications/
+
+# Generated artifacts
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.o
+*.elf
+*.map
+*.hex
+*.bin
+*.npz
+*.zip
+datasets/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
