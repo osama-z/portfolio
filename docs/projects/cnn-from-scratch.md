@@ -1,6 +1,6 @@
 # CNN from scratch
 
-[Portfolio home](../README.md)
+[Portfolio home](../../README.md)
 
 Train a small convolutional neural network using NumPy, export its learned
 weights, and verify inference through independent C and C++ implementations.

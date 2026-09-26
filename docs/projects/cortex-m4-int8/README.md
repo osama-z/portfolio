@@ -1,6 +1,6 @@
 # Verified int8 CNN on an emulated Cortex-M4
 
-[Portfolio home](../../README.md) · [Implementation plan](PLAN.md)
+[Portfolio home](../../../README.md) · [Implementation plan](PLAN.md)
 
 **Status: planning. There is no firmware or integer inference implementation in
 this folder yet.**

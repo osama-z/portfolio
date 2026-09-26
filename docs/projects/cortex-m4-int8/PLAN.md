@@ -1,6 +1,6 @@
 # Implementation plan
 
-[Project brief](README.md) · [Portfolio home](../../README.md)
+[Project brief](README.md) · [Portfolio home](../../../README.md)
 
 Planning estimate: 40–60 focused hours, with additional learning/debugging time
 as needed. Complete each milestone's checks before marking it done.

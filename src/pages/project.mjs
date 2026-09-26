@@ -1,0 +1,5 @@
+import { projectCover, external, arrow } from '../components/site.mjs';
+import { profile } from '../content/site.mjs';
+export function projectPage(p) {
+  return `<section class="project-detail-intro content-width"><a class="back-link" href="work.html">← All projects</a><div class="project-detail-grid"><div><span class="pill">${p.status} · ${p.year}</span><h1>${p.full}</h1><p>${p.description}</p><div class="tags">${p.stack.map(s=>`<span>${s}</span>`).join('')}</div></div><div class="detail-cover">${projectCover(p)}</div></div></section><section class="project-body content-width"><div><h2>The problem.</h2><p>${p.problem}</p></div><div><h2>What I worked on.</h2><p>${p.contribution}</p></div><div><h2>Inside the project.</h2><ul>${p.focus.map(s=>`<li>${s}</li>`).join('')}</ul></div><div class="project-resource"><p>Interested in the details or in building something together?</p>${external(profile.github, 'My GitHub profile', 'text-link')}<a class="text-link" href="mailto:${profile.email}">Ask me about this project ${arrow}</a></div></section>`;
+}

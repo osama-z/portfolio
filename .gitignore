@@ -9,12 +9,16 @@ venv/
 /private/
 /personal-notes/
 /applications/
+/docs/design/
 
 # Generated artifacts
 __pycache__/
 *.py[cod]
 build/
 dist/
+node_modules/
+output/
+.playwright-cli/
 *.o
 *.elf
 *.map
