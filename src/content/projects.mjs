@@ -72,14 +72,10 @@ export const projects = [
   },
   {
     id: 'neurontrade', title: 'NeuronTrade', full: 'NeuronTrade — Paper Trading & Research',
-    cover: 'Measure first.\nTrade on paper.', color: 'mint', kind: 'trading', category: 'Python systems',
+    cover: 'Measure first.\nTrade on paper.', color: 'blue', kind: 'trading', category: 'Python systems',
     status: 'Public demo · Paper only', year: '2026', href: 'neurontrade.html',
     stack: ['Python', 'SQLite', 'ZeroMQ', 'pytest'],
     repository: 'https://github.com/osama-z/bottrade-v1',
-    summary: 'Simulated trading, persistent risk controls, and research that tests its own assumptions.',
-    description: 'A public paper trading and quantitative research demo. Market data flows through indicators and strategies into risk checks, simulated execution and a SQLite audit trail. Live and testnet executors are disabled in this version; it is an educational engineering project with no proven trading edge.',
-    problem: 'A backtest can look convincing while hiding inconsistent sizing, trading costs or selection bias. The challenge was to build a system whose decisions and research results could be inspected and tested.',
-    contribution: 'Built a modular Python pipeline with Decimal-based position sizing, persistent circuit breakers, paper execution and backtesting. Shared decision logic and regression tests check consistency between simulation paths. Documented out-of-sample experiments that rejected promising in-sample results.',
-    focus: ['Simulated execution and SQLite persistence', 'Position sizing, portfolio heat limits and manual-reset circuit breakers', 'Shared strategy decisions across backtests and paper trading', 'Out-of-sample validation that exposed selection bias', 'Disabled live and testnet executors in the public demo'],
+    summary: 'Real market data. Simulated trades. An inspectable path from strategy to risk checks and research findings.',
   },
 ];

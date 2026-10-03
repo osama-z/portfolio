@@ -31,8 +31,9 @@ src/
     about.mjs          About page
     cnn.mjs            CNN case study
     cortex.mjs         Planned Cortex-M4 case study
+    neurontrade.mjs    Paper trading and research case study
     not-found.mjs      404 page
-    project.mjs        Template for the six additional project pages
+    project.mjs        Template for the five additional project pages
   components/
     site.mjs           Shared layout, navigation, cards and SVG helpers
     illustrations.mjs  Reusable circuit and neural-network illustrations
@@ -59,8 +60,8 @@ Only `src/` supplies website content. The build copies static assets into
 `dist/assets/` and emits the page routes from `src/pages/index.mjs`.
 It recreates `dist/` to remove stale output, so never edit that directory directly.
 
-The site presents six projects alongside the CNN case study and planned
-Cortex-M4 experiment.
+The site presents five project pages alongside the CNN and NeuronTrade case
+studies and the planned Cortex-M4 experiment.
 
 ## Where to make changes
 
@@ -68,6 +69,8 @@ Cortex-M4 experiment.
 - Shared header, footer and project cards: `src/components/site.mjs`.
 - Profile and common links: `src/content/site.mjs`.
 - Project content and status: `src/content/projects.mjs`.
+- NeuronTrade case study: `src/pages/neurontrade.mjs`; gallery card metadata
+  stays in `src/content/projects.mjs`.
 - Styling and motion: `src/styles/main.css` and `src/scripts/main.js`.
 - Final artwork: `src/assets/`; keep concepts and review captures in `output/`.
 - New pages: add a page module and register it in `src/pages/index.mjs`.

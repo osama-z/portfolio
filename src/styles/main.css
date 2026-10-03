@@ -50,6 +50,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid currentColor; outline
 .color-lavender { background: var(--lavender); color: var(--ink); }
 .color-orange { background: #f18e57; color: var(--ink); }
 .color-mint { background: #bedb92; color: var(--ink); }
+.color-blue { background: #9db9fb; color: var(--ink); }
 
 /* Navigation */
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 26px 56px; min-height: 103px; }
@@ -272,6 +273,43 @@ a:focus-visible, button:focus-visible { outline: 3px solid currentColor; outline
 .roadmap { padding-left: 25px; }
 .roadmap li { padding-left: 10px; margin-bottom: 30px; }
 .roadmap h3 { font-size: 25px; margin-bottom: 12px; }
+
+/* NeuronTrade case study */
+.neurontrade-page .case-intro h1 { font-size: clamp(48px, 6.1vw, 86px); }
+.neurontrade-page .case-meta { flex-wrap: wrap; }
+.neurontrade-art { width: 100%; max-width: 400px; margin-inline: auto; color: var(--ink); }
+.neurontrade-facts strong { display: block; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.1; }
+.neurontrade-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0; margin: 0; list-style: none; }
+.neurontrade-flow li { background: #e7edfc; border: 1px solid #17171925; border-radius: 14px; padding: 25px; }
+.neurontrade-flow h3 { font-size: 26px; margin-block: 18px 14px; }
+.neurontrade-flow p { font-size: 15px; }
+.neurontrade-page code { overflow-wrap: anywhere; font-size: .85em; }
+.neurontrade-page .text-link { margin-top: 20px; }
+.neurontrade-table-wrap { overflow-x: auto; margin-block: 25px; border: 1px solid #17171935; border-radius: 12px; }
+.neurontrade-table-wrap:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.neurontrade-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.neurontrade-table caption { text-align: left; padding: 16px 20px; font-size: 13px; color: var(--muted); }
+.neurontrade-table th, .neurontrade-table td { padding: 15px 20px; text-align: right; white-space: nowrap; border-top: 1px solid #17171925; }
+.neurontrade-table th:first-child { text-align: left; }
+.neurontrade-table thead { background: #e7edfc; }
+.neurontrade-table tbody th { font-weight: 650; }
+.neurontrade-page .note-box { background: #e7edfc; }
+@media (max-width: 800px) {
+  .neurontrade-facts { gap: 18px; }
+  .neurontrade-facts>div+div { padding-left: 18px; }
+  .neurontrade-flow { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .neurontrade-page .case-intro h1 { font-size: clamp(43px, 10.7vw, 60px); }
+  .neurontrade-page .case-cover { grid-template-columns: 1fr; }
+  .neurontrade-page .neurontrade-facts { grid-template-columns: 1fr; gap: 20px; }
+  .neurontrade-page .neurontrade-facts>div+div { border-left: 0; border-top: 1px solid #17171935; padding: 20px 0 0; }
+  .neurontrade-page .neurontrade-facts strong { font-size: 32px; }
+  .neurontrade-page .neurontrade-facts p { font-size: 14px; }
+  .neurontrade-page .neurontrade-facts small { font-size: 12px; }
+  .neurontrade-flow li { padding: 22px; }
+  .neurontrade-table th, .neurontrade-table td { padding: 12px; }
+}
 
 /* Responsive layouts */
 @media (min-width: 1500px) {
