@@ -32,13 +32,13 @@ src/
     cnn.mjs            CNN case study
     cortex.mjs         Planned Cortex-M4 case study
     not-found.mjs      404 page
-    project.mjs        Template for the five additional project pages
+    project.mjs        Template for the six additional project pages
   components/
     site.mjs           Shared layout, navigation, cards and SVG helpers
     illustrations.mjs  Reusable circuit and neural-network illustrations
   content/
     site.mjs           Shared profile data
-    projects.mjs       Seven projects: titles, summaries, status and details
+    projects.mjs       Eight projects: titles, summaries, status and details
   styles/
     main.css           Website styles
   scripts/
@@ -59,7 +59,7 @@ Only `src/` supplies website content. The build copies static assets into
 `dist/assets/` and emits the page routes from `src/pages/index.mjs`.
 It recreates `dist/` to remove stale output, so never edit that directory directly.
 
-The site presents five projects alongside the CNN case study and planned
+The site presents six projects alongside the CNN case study and planned
 Cortex-M4 experiment.
 
 ## Where to make changes
@@ -77,6 +77,7 @@ Cortex-M4 experiment.
 
 | Project | Status | Documentation |
 | --- | --- | --- |
+| NeuronTrade | Public paper-only demo | [Source](https://github.com/osama-z/bottrade-v1) · [Scope and setup](https://github.com/osama-z/bottrade-v1#readme) |
 | CNN from scratch | v0.1.0 released | [Overview](docs/projects/cnn-from-scratch.md) · [Source](https://github.com/osama-z/cnn-from-scratch) |
 | Int8 CNN on emulated Cortex-M4 | Planned | [Brief](docs/projects/cortex-m4-int8/README.md) · [Implementation plan](docs/projects/cortex-m4-int8/PLAN.md) |
 
