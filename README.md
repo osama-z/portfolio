@@ -4,8 +4,9 @@ A static portfolio for Osama's engineering and software projects.
 
 ## Run locally
 
-Requires Node.js 20 or newer. The current build uses Node's standard library and
-has no npm dependencies to install.
+Requires Node.js 20 or newer. Building and serving use Node's standard library;
+no package installation is required for those commands. Optional browser checks
+use the pinned Playwright development dependency.
 
 ```sh
 npm run dev
@@ -19,6 +20,37 @@ npm run build    # Recreate dist/ from src/
 npm run preview  # Build and serve without watching
 npm run check    # Build; check headings, local links, anchors and assets
 ```
+
+## Check the browser
+
+Run these commands from the repository root in your normal terminal:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run check:browser
+```
+
+The check starts and stops its own local preview, then visits all 12 pages at
+320, 390, 768 and 1440 pixels wide. It checks resource loading, browser errors,
+horizontal overflow, NeuronTrade card contrast and navigation, mobile menu
+behavior, and motion preferences. It saves desktop and mobile screenshots of
+the gallery and NeuronTrade page, plus a JSON report, under
+`output/browser-check/<timestamp>/`.
+
+Review the screenshots for visual quality; passing automated assertions alone
+does not establish that every layout looks right. Failed checks exit nonzero.
+An environment that cannot start a local preview or browser produces a
+`blocked` report, never a passing result.
+
+The **Browser checks** GitHub Actions workflow runs the same checks on relevant
+pushes and pull requests and supports manual runs. Download its `browser-review`
+artifact for screenshots and the report. It runs separately from deployment.
+
+If a restricted agent session reports `EPERM` or `Operation not permitted`, use
+your normal terminal or the workflow. Reinstalling a skill does not change the
+execution environment's socket restrictions. Browser plugins also require
+their own connection in the desktop app.
 
 ## Project structure
 
@@ -48,7 +80,9 @@ src/
 scripts/
   build.mjs            Build the published website
   serve.mjs            Local preview and development watcher
+  preview-server.mjs   Shared static server for preview and browser checks
   check.mjs            Existing website checks
+  check-browser.mjs    Playwright checks and review screenshots
 docs/
   projects/            Technical project write-ups and implementation plans
 .github/workflows/     GitHub Pages deployment
