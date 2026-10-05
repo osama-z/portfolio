@@ -529,7 +529,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid currentColor; outline
   .toolbox-grid p { font-size: 15px; }
   .project-detail-intro { padding-block: 20px 45px; }
   .back-link { margin-bottom: 27px; font-size: 13px; }
-  .project-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .project-detail-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .project-detail-grid h1 { font-size: 52px; overflow-wrap: break-word; }
   .detail-cover { max-width: 300px; }
   .detail-cover .project-cover { height: 350px; }

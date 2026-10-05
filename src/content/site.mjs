@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Osama Zuraid',
-  email: 'Osazf11@gmail.com',
+  email: 'osazf11@hotmail.com',
   location: 'Gaza, Palestine',
   github: 'https://github.com/osama-z',
   repository: 'https://github.com/osama-z/cnn-from-scratch',
